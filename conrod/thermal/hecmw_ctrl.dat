@@ -1,0 +1,20 @@
+# for solver
+!MESH, NAME=fstrMSH, TYPE=HECMW-DIST
+conrod_thermal.msh
+!CONTROL, NAME=fstrCNT
+conrod_thermal.cnt
+!RESULT, NAME=fstrRES, IO=OUT
+conrod_thermal.res
+# for partitioner
+!MESH, NAME=part_in,TYPE=HECMW-ENTIRE
+conrod_thermal.msh
+!MESH, NAME=part_out,TYPE=HECMW-DIST
+conrod_thermal.msh
+# for visualizer
+!MESH, NAME=mesh, TYPE=HECMW-ENTIRE
+conrod_thermal.msh
+!RESULT, NAME=result, IO=IN
+conrod_thermal.res
+!RESULT, NAME=vis_out, IO=OUT
+conrod_thermal
+!SUBDIR,ON
