@@ -1,0 +1,21 @@
+# for solver
+!MESH, NAME=fstrMSH, TYPE=HECMW-DIST
+drill.msh
+!CONTROL, NAME=fstrCNT
+drill.cnt_static
+!RESULT, NAME=fstrRES, IO=OUT
+drill.res
+# for partitioner
+!MESH, NAME=part_in,TYPE=HECMW-ENTIRE
+../drill.msh
+!MESH, NAME=part_out,TYPE=HECMW-DIST
+drill.msh
+# for visualizer
+!MESH, NAME=mesh, TYPE=HECMW-ENTIRE
+drill.msh
+!RESULT, NAME=result, IO=IN
+drill.res
+!RESULT, NAME=vis_out, IO=OUT
+drill
+!SUBDIR,ON
+

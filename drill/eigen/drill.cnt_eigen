@@ -1,0 +1,37 @@
+##
+## Control File for FSTR solver
+##
+!STEP,TYPE=STANDARD
+#!VERSION
+# 3
+!SOLUTION,TYPE=EIGEN
+!EIGEN
+ 10, 1e-007, 60
+!WRITE,VISUAL
+!WRITE,RESULT
+!ECHO
+
+!BOUNDARY
+  xfix, 1, 1, 0.0
+  yfix, 2, 2, 0.0
+  zfix, 3, 3, 0.0
+#!CLOAD
+#!   fp, 2,  0.8065
+#!   fm, 2, -0.7937
+#!   fv, 3, -0.3861
+
+!SOLVER,METHOD=MUMPS,PRECOND=3,ITERLOG=YES,TIMELOG=YES
+  1000000, 1
+ 1.0e-8, 1.0, 0.0
+
+!MATERIAL, NAME=M1
+!ELASTIC
+2.1e+8, 0.3
+!DENSITY
+7.85e-5
+
+!VISUAL, method=PSR
+!surface_num = 1
+!surface 1
+!output_type = COMPLETE_MICROAVS
+!END

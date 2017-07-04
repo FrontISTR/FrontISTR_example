@@ -1,0 +1,11 @@
+DBG/
+fstrRES/
+LOG/
+MESH/
+vis_out/
+.log
+FSTR.msg
+FSTR.sta
+.msh
+hecmw_vis.ini
+hecmw_part_ctrl.dat
